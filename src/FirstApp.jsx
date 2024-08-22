@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types';
 //const newMessage = [0,1,2,3,4,5,6,7,8,9];
 // const newMessage = {
 //     message: 'Roberto',
@@ -25,7 +25,8 @@ import React from 'react'
 
 // es mas facil destructurar el props
 //const FirstApp = (props) => {
-const FirstApp = ({title, subTitle}) => {
+
+export const FirstApp = ({ title , subTitle, name }) => {
     
 
     return (
@@ -34,12 +35,23 @@ const FirstApp = ({title, subTitle}) => {
             <h1>{getSaludo(false)}</h1> */}
             {/* <h1>{newMessage}</h1> */}
             {/* <h1>{JSON.stringify(newMessage)}</h1> */}
-            {/* <h1>{title}</h1> */}
+            <h1>{ title }</h1>
             {/* <h2>FirstApp</h2> */}
             {/* <p>Soy tito</p> */}
-            {/* <p>{subTitle + 1}</p> */}
+            <p>{ subTitle }</p>
+            <p>{ name }</p>
         </>
     )
 }
 
-export default FirstApp;
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.string,
+    name : PropTypes.string,
+}
+
+FirstApp.defaultProps = {
+    title : 'No hay titulo',
+    subTitle : 'No hay subtitulo',
+    name : 'No hay nombre',
+}
