@@ -24,6 +24,8 @@ export const CounterApp = ({ value  }) => {
     //la segunda cte es una funcion que hace funcionar al useState y se tiene que llamar a esa para cambiar al counter.
     
     const [counter, setCounter] = useState( value );
+
+    console.log('render');
     
     //y cuando lo llamamos el setCounter cambio y en consecuencia se tiene que volver a renderizar
     
@@ -45,13 +47,11 @@ export const CounterApp = ({ value  }) => {
         setCounter( (c) => c + 1 ) 
     }
 
-    const handleReset = () =>
-    {
-        setCounter( 0 );
+    const handleReset = () => {
+        setCounter( value );
     }
 
-    const handleMinus = () =>
-    {
+    const handleSubstract = () => {
         setCounter( counter - 1 );
     }
     return(
@@ -61,7 +61,7 @@ export const CounterApp = ({ value  }) => {
             <button onClick={ handleAdd }>
                 +1
             </button>
-            <button onClick={ handleMinus }>
+            <button onClick={ handleSubstract }>
                 -1
             </button>
             <button onClick={ handleReset }>
