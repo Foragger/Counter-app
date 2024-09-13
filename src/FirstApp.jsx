@@ -35,9 +35,12 @@ export const FirstApp = ({ title , subTitle, name }) => {
             <h1>{getSaludo(false)}</h1> */}
             {/* <h1>{newMessage}</h1> */}
             {/* <h1>{JSON.stringify(newMessage)}</h1> */}
+
             <h1>{ title }</h1>
+
             {/* <h2>FirstApp</h2> */}
             {/* <p>Soy tito</p> */}
+
             <p>{ subTitle }</p>
             <p>{ name }</p>
         </>
@@ -50,8 +53,8 @@ FirstApp.propTypes = {
     name : PropTypes.string,
 }
 
-FirstApp.defaultProps = {
-    title : 'No hay titulo',
-    subTitle : 'No hay subtitulo',
-    name : 'No hay nombre',
-}
+// FirstApp.defaultProps = {
+//     title : 'No hay titulo',
+//     subTitle : 'No hay subtitulo',
+//     name : 'No hay nombre',
+// }
