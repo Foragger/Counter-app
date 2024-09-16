@@ -3,9 +3,16 @@
 exports[`Pruebas en <FirstApp /> Debe de hacer match con el snapshot 1`] = `
 <div>
   <h1>
-    Hoy soy titardox
+    Hola, soy Titardox
   </h1>
-  <p />
-  <p />
+  <p>
+    No hay subtitulo
+  </p>
+  <p>
+    No hay subtitulo
+  </p>
+  <p>
+    No hay nombre
+  </p>
 </div>
 `;
